@@ -29,6 +29,7 @@ class StatusViewSet(viewsets.ViewSet):
             print(err)
             return Response(f'Could not update status for "{pk}"', status.HTTP_400_BAD_REQUEST)
         form = UpdateStatusForm(request.data, instance=instance)
+        print(form)
         if form.is_valid():
             form.save()
             return Response('OK', status.HTTP_200_OK)

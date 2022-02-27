@@ -16,5 +16,5 @@ class UserStatusSerializer(serializers.BaseSerializer):
             'user_name': user.user_name,
             'alias': user.alias,
             'current_tab': instance.current_tab,
-            'keyboard_activity': json.loads(instance.keyboard_activity)
+            'keyboard_activity': json.loads(instance.keyboard_activity) if instance.keyboard_activity else []
         }
