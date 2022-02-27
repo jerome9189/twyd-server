@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import django_on_heroku
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -133,5 +134,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+django_on_heroku.settings(locals())
