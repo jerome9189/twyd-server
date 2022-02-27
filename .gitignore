@@ -1,0 +1,7 @@
+*.log
+*.pot
+*.pyc
+.venv/
+*.sqlite3
+__pycache__/
+local_settings.py
