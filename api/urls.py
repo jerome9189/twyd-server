@@ -6,6 +6,8 @@ router = routers.SimpleRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'room', views.RoomStatusViewSet, basename='room_status')
 router.register(r'status', views.StatusViewSet, basename='status')
+router.register(r'preferences', views.PreferencesViewSet, basename='preferences')
+
 # router.register(r'preferences', views.)
 
 # Wire up our API using automatic URL routing.
