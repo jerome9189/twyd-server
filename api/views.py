@@ -48,7 +48,6 @@ class PreferencesViewSet(viewsets.ViewSet):
         return Response(serializer.data)
         
     def update(self, request, pk=None):
-        print("hello")
         if not pk:
             return Response('No user specified', status.HTTP_400_BAD_REQUEST)
         try:
