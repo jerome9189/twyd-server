@@ -20,7 +20,7 @@ class Status(models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
-    current_tab = models.CharField(max_length=64, null=True, blank=True)
+    current_tab = models.TextField(null=True, blank=True)
     keyboard_activity = models.TextField(null=True, blank=True)
 
     class Meta:
